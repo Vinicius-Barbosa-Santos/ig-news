@@ -41,7 +41,7 @@ export default function HomeFigma() {
               </span>
             </Link>
           </nav>
-          <button className="flex items-center gap-2 rounded-full bg-[#1f2729] px-3 py-2 text-xs md:px-4 md:py-3 md:text-sm">
+          <button className="flex cursor-pointer items-center gap-2 rounded-full bg-[#1f2729] px-3 py-2 text-xs transition-opacity duration-300 hover:opacity-80 md:px-4 md:py-3 md:text-sm">
             <Github className="size-4 text-white md:size-5" />
             <span className="font-bold text-[#e1e1e6] sm:hidden">Sign</span>
             <span className="hidden font-bold whitespace-nowrap text-[#e1e1e6] sm:inline">
