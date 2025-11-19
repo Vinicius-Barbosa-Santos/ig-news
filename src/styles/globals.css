@@ -133,3 +133,69 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .container-1108 {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    max-width: 69.25rem;
+  }
+  .underline-c {
+    text-decoration-color: #eba417;
+  }
+  .underline-gap-8 {
+    text-underline-offset: 28px;
+  }
+  .underline-thick {
+    text-decoration-thickness: 3px;
+  }
+  .link-pill {
+    position: relative;
+    padding-bottom: 16px;
+    --pill-w: 120px;
+    --pill-h: 8px;
+    --pill-stroke: 2px;
+    --pill-color: #eba417;
+    --pill-outline: #0ea5e9;
+  }
+  .link-pill::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1px;
+    width: var(--pill-w);
+    height: var(--pill-h);
+    border-radius: 9999px;
+    background: var(--pill-color);
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+  .link-pill::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(-1px - var(--pill-stroke));
+    width: calc(var(--pill-w) + var(--pill-stroke) * 2 + 4px);
+    height: calc(var(--pill-h) + var(--pill-stroke) * 2);
+    border-radius: 9999px;
+    border: var(--pill-stroke) solid var(--pill-outline);
+    opacity: 0;
+    transition: opacity 150ms ease;
+    background: transparent;
+  }
+  .link-pill:hover::after {
+    opacity: 1;
+  }
+  .link-pill:hover::before {
+    opacity: 1;
+  }
+  .link-pill-active::after {
+    opacity: 1;
+  }
+  .link-pill-active::before {
+    opacity: 1;
+  }
+}

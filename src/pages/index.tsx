@@ -1,11 +1,13 @@
-import { Button } from "@/components/ui/button";
+import Head from "next/head";
+import HomeFigma from "@/components/figma/Home";
 
 export default function Home() {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center gap-2">
-      <h1>Hello, world!</h1>
-
-      <Button>Subscribe now</Button>
+    <div className="flex h-screen w-full flex-col">
+      <Head>
+        <title>IG News</title>
+      </Head>
+      <HomeFigma />
     </div>
   );
 }
